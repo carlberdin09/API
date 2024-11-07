@@ -1,0 +1,37 @@
+GET /statuses/user_timeline.json?screen_name=BANA_COMIC HTTP/1.1
+Host: api.twitter.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+{
+    "statuses": [
+        {
+            "id": 1854392813305376949,
+            "text": "Check out my latest comic!",
+            "created_at": "2024-11-07T08:00:00Z",
+            "user": {
+                "id": 12345,
+                "name": "BANA_COMIC",
+                "screen_name": "BANA_COMIC"
+            },
+            "retweet_count": 150,
+            "favorite_count": 200
+        }
+    ]
+}
+
+
+POST /statuses/update.json HTTP/1.1
+Host: api.twitter.com
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+{
+    "id": 1854392813305376949,
+    "text": "Excited to share my latest comic!",
+    "created_at": "2024-11-07T08:00:00Z",
+    "user": {
+        "id": 12345,
+        "name": "BANA_COMIC",
+        "screen_name": "BANA_COMIC"
+    },
+    "retweet_count": 0,
+    "favorite_count": 0
+}
